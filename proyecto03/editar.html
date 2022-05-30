@@ -1,0 +1,43 @@
+{% extends 'master.html' %}
+
+{% block title %} Editar Matricula {% endblock %}
+{% block content %}
+    <h1 style="width: 100%">
+        Editar Matricula - {{ docente.id }}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="nombre_p">Nombre Propietario</label>
+            <input type="text" name="nombre_p"
+                   value={{ matriculas.nombre_p }}
+                   placeholder="Nombre Propietario" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="placa">Placa</label>
+            <input type="text" name="placa"
+                   value={{ matriculas.placa }}
+                   placeholder="Placa" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="año">Año</label>
+            <input type="text" name="año"
+                   value={{ matriculas.año }}
+                   placeholder="Año" required>
+            </input>
+        </p>
+        <p>
+            <label for="costo_m">Costo Matricula</label>
+            <input type="number" name="costo_m"
+                   value={{ matriculas.costo_m }}
+                   placeholder="Costo de Matricula" required>
+            </input>
+        </p>
+        <p>
+            <button type="submit">Editar</button>
+        </p>
+    </form>
+{% endblock %}

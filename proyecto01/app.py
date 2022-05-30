@@ -65,6 +65,7 @@ def crear():
 
 
 @app.route('/editar/docente/<int:docente_id>/', methods=('GET', 'POST'))
+
 def editar(docente_id):
     docente = Docente.query.get_or_404(docente_id)
 
