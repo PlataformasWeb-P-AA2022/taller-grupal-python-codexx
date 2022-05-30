@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+
+{% block title %} Editar Matricula {% endblock %}
+{% block content %}
+    <h1 style="width: 100%">
+        Editar Matricula - {{ matricula.id }}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="nombre">Nombre del propietario</label>
+            <input type="text" name="nombre"
+                   value={{ matricula.nombre_propietario }}
+                   placeholder="Nombre propietario" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="placa">Placa</label>
+            <input type="text" name="placa"
+                   value={{ matricula.placa }}
+                   placeholder="Placa del vehiculo" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="anio_ma">Año de matricula</label>
+            <input type="text" name="anio_ma"
+                   value={{ matricula.anio_matricula }}
+                   placeholder="Año de la matricula" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="val_ma">Valor de matricula</label>
+            <input type="text" name="val_ma"
+                   value={{ matricula.valor_matricula }}
+                   placeholder="Valor de la matricula" required>
+            </input>
+        </p>
+        <p>
+            <button type="submit">Editar</button>
+        </p>
+    </form>
+{% endblock %}
