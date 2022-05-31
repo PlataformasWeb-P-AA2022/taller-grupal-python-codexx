@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+
+{% block title %} Crear Docentes {% endblock %}
+{% block content %}
+    <h1 style="width: 100%">Agregar docente</h1>
+    <form method="post">
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre"
+                   placeholder="Ingrese nombre" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido"
+                   placeholder="Ingrese apellido" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" name="ciudad"
+                   placeholder="Ingrese ciudad" required>
+            </input>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

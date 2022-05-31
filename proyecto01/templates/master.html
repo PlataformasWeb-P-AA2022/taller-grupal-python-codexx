@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <title>
+        {% block title %} Demo app - flask {% endblock %}
+    </title>
+  </head>
+  <body>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('crear') }}">+ Docente</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+  </body>
+</html>

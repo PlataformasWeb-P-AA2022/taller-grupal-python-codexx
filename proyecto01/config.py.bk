@@ -1,0 +1,10 @@
+"""
+"""
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+# sqlite
+enlace = 'sqlite:///' + os.path.join(basedir, 'database.db')
+
+# mysql
+# enlace = "mysql+mysqlconnector://root:11112222@localhost:3306/base_flask_001"

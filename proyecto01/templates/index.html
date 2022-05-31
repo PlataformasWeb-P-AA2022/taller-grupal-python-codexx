@@ -1,0 +1,42 @@
+{% extends 'master.html' %}
+
+{% block title %} Docentes {% endblock %}
+{% block content %}
+    <div>
+
+        <h1 class="title">Administrar Docentes </h1>
+        <hr>
+        <div>
+
+        <table>
+          <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Ciudad</th>
+              <th>Opciones</th>
+          </tr>
+
+        {% for d in docentes %}
+          <tr>
+                <td><b>{{ d.id }}</b></td>
+                <td>
+                    <p class="name">{{ d.nombre }} </p>
+                </td>
+                <td>{{ d.apellido }}</td>
+                <td>{{ d.ciudad }}</td>
+                <td class="name">
+                  [<a href="{{ url_for('docente', docente_id=d.id)}}">
+                    Ver detalle
+                  </a>]
+                  [
+                  <a href="{{ url_for('editar', docente_id=d.id) }}">Editar</a>
+                  ]
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+
+        </div>
+    </div>
+{% endblock %}
