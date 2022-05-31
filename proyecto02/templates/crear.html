@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+
+{% block title %} Crear Docentes {% endblock %}
+{% block content %}
+    <h1 style="width: 100%">Agregar Matricula</h1>
+    <form method="post">
+        <p>
+            <label for="nombre">Nombre del propietario</label>
+            <input type="text" name="nombre"
+                   placeholder="Ingrese nombre" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="placa">Placa del vehiculo</label>
+            <input type="text" name="placa"
+                   placeholder="Ingrese la placa" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="anio_ma">Año de matricula</label>
+            <input type="text" name="anio_ma"
+                   placeholder="Ingrese el año de matricula" required>
+            </input>
+        </p>
+
+        <p>
+            <label for="val_ma">Valor de matricula</label>
+            <input type="text" name="val_ma"
+                   placeholder="Ingrese el valor de la matricula" required>
+            </input>
+        </p>
+
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}
